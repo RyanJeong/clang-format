@@ -70,9 +70,12 @@ BreakConstructorInitializers: BeforeColon
 # https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/test/gmock-more-actions_test.cc#L266
 # https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions
 AlignAfterOpenBracket: Align
+# AlignAfterOpenBracket: DontAlign
+
 AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
-BinPackArguments: true
+BinPackArguments: false
+BinPackParameters: false
 
 # Munseong: We don't need to address this case, because we only use c++ syntax(e.g., static_cast<T>)
 # SpaceAfterCStyleCast: true  # (int) i;

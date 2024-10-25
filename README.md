@@ -1,6 +1,6 @@
 # clang-format
 
-A .clang-format file to adhere to the google C++ style guide
+A `.clang-format` file to adhere to the google C++ style guide
 
 - You can easily verify how the formatter arranges things using the command below.
 
