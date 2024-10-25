@@ -74,7 +74,8 @@ AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
 BinPackArguments: true
 
-SpaceAfterCStyleCast: true  # (int) i;
+# Munseong: We don't need to address this case, because we only use c++ syntax(e.g., static_cast<T>)
+# SpaceAfterCStyleCast: true  # (int) i;
 SpaceAfterLogicalNot: false
 SpaceAfterTemplateKeyword: true
 SpaceBeforeAssignmentOperators: true
