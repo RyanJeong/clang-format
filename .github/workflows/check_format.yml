@@ -21,5 +21,6 @@ jobs:
       - name: Run check_format.sh
         run: |
           chmod +x check_format.sh
+          cp -rf ref_c test_c
           ./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_c test_c
 
