@@ -1,0 +1,35 @@
+name: Check Formatting
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format_check:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: |
+          sudo apt update
+          sudo apt install -y wget
+
+          wget https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 19
+
+          sudo apt install -y clang-format-19
+
+          sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-19 100
+          sudo update-alternatives --set clang-format /usr/bin/clang-format-19
+
+      - name: Run check_format.sh
+        run: |
+          chmod +x check_format.sh
+          cp -rf ref_c test_c
+          ./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_c test_c
+

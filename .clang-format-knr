@@ -1,0 +1,43 @@
+# A .clang-format file to adhere to the K&R style
+# - CLANG-FORMAT STYLE OPTIONS: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# 
+# Author: Munseong Jeong <ryan.m.jeong@hotmail.com>
+
+BasedOnStyle: LLVM
+IndentWidth: 4
+UseTab: Never
+
+BreakBeforeBraces: Linux
+BraceWrapping:
+  AfterControlStatement: false
+  AfterFunction: true
+  AfterClass: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterNamespace: false
+  AfterEnum: false
+  BeforeCatch: false
+  BeforeElse: false
+  IndentBraces: false
+
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Always
+IndentCaseLabels: false
+SpaceAfterCStyleCast: true
+AllowShortFunctionsOnASingleLine: None
+ColumnLimit: 80
+MaxEmptyLinesToKeep: 1
+Cpp11BracedListStyle: false
+AlignTrailingComments: true
+ReflowComments: true
+
+SpacesBeforeTrailingComments: 2
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '<[[:alnum:].]+>'
+    Priority:        1
+  - Regex:           '.*'
+    Priority:        2
+SortIncludes: CaseSensitive
+AlignEscapedNewlines: Left
