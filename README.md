@@ -1,27 +1,21 @@
 # clang-format
 
-- You can easily verify how the formatter arranges things using the command below.
+This repository provides a `clang-format` configuration file that enforces the **K&R style for C** and the **Google C++ Style Guide** for C++.
 
-```sh
-$ clang-format test.cc --verbose
-Formatting [1/1] test.cc
-... skipped ...
-```
+A reference directory contains source code that follows the correct formatting. Every time the `clang-format` configuration is modified, a GitHub Action verifies whether the formatting is applied correctly.
 
-## Generate Source Codes To Test `clang-format`
+## `clang-format` Version
 
-This process is only needed when you want to add reference codes to test `clang-format`.
+The current clang-format version used in this repository is **19**.
+
+The installation instructions for version 19 are as follows:
 
 ```shell
-# Generate C test codes
-rm -rf test_c && \
-  cp -r ref_c test_c && \
-  for code in test_c/*; do clang-format -i ${code}; done
-```
+wget https://apt.llvm.org/llvm.sh
+chmod +x llvm.sh
+sudo ./llvm.sh 19
 
-## Test `clang-format`
-
-```shell
-# Test clang-format for C K&R style
-./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_c test_c
+sudo apt install -y clang-format-19
+sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-19 100
+sudo update-alternatives --set clang-format /usr/bin/clang-format-19
 ```
