@@ -39,5 +39,5 @@ jobs:
           chmod +x check_format.sh
 
           cp -rf ref_cc test_cc
-          ./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_cc test_cc
+          ./check_format.sh "$(which clang-format)" ".clang-format" ref_cc test_cc
 
