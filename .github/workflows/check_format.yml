@@ -1,0 +1,25 @@
+name: Check Formatting
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format_check:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install clang-format
+        run: |
+          sudo apt update
+          sudo apt install -y clang-format
+
+      - name: Run check_format.sh
+        run: |
+          chmod +x check_format.sh
+          ./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_c test_c
+
