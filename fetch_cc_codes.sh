@@ -10,7 +10,7 @@ trap 'rm -f "${html_file}"' EXIT
 curl -s "${url}" -o "${html_file}"
 
 target_dir="ref_cc"
-target_postfix="google_cpp_style_guice"
+target_postfix="google_cpp_style_guide"
 rm -rf ${target_dir}/${target_postfix}*
 
 count=0
