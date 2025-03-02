@@ -1,0 +1,136 @@
+# A .clang-format file to adhere to the Google C++ style guide
+# - Google C++ Style Guide: https://google.github.io/styleguide/cppguide.html
+# - CLANG-FORMAT STYLE OPTIONS: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# 
+# Author: Munseong Jeong <ryan.m.jeong@hotmail.com>
+
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++14
+
+# Spaces inside braces for braced-init-list are optional.  If you use them,
+# put them on both sides!
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+IndentCaseLabels: true
+PointerAlignment: Left
+
+AlignConsecutiveAssignments: None
+AlignOperands: DontAlign
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: All
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+BreakBeforeBinaryOperators: None
+# BreakTemplateDeclarations: Yes
+AlwaysBreakTemplateDeclarations: Yes
+EmptyLineBeforeAccessModifier: LogicalBlock
+IncludeBlocks: Preserve  # to sort after getting help from cpplint
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+SeparateDefinitionBlocks: Leave
+QualifierAlignment: Custom
+QualifierOrder: ['friend', 'inline', 'static', 'constexpr', 'const', 'volatile', 'type', 'restrict']
+
+# https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googletest/test/googletest-filepath-test.cc#L398
+IndentPPDirectives: None
+
+# https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googletest/samples/sample8_unittest.cc#L53
+BreakBeforeTernaryOperators: true
+
+# https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/test/gmock-function-mocker_test.cc#L822
+# AllowShortLambdasOnASingleLine: Inline
+
+# https://google.github.io/styleguide/cppguide.html#Constructor_Initializer_Lists
+PackConstructorInitializers: NextLine
+
+# https://google.github.io/styleguide/cppguide.html#Line_Length
+ColumnLimit: 80
+IndentWidth: 2
+ContinuationIndentWidth: 4
+ReflowComments: true
+
+# https://google.github.io/styleguide/cppguide.html#Spaces_vs._Tabs
+TabWidth: 2
+UseTab: Never
+
+# https://google.github.io/styleguide/cppguide.html#Class_Format
+AccessModifierOffset: -1  # IntentWidth - 1
+
+# https://google.github.io/styleguide/cppguide.html#Namespace_Formatting
+CompactNamespaces: false
+FixNamespaceComments: true
+NamespaceIndentation: None
+ShortNamespaceLines: 0
+
+# https://google.github.io/styleguide/cppguide.html#Constructor_Initializer_Lists
+BreakConstructorInitializers: BeforeColon
+
+# https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions
+# https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/include/gmock/gmock-nice-strict.h#L171
+# https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/test/gmock-more-actions_test.cc#L266
+# https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions
+# AlignAfterOpenBracket: AlwaysBreak
+BracedInitializerIndentWidth: 2
+
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+# BinPackArguments: true
+# BinPackParameters: true
+PenaltyBreakBeforeFirstCallParameter: 2000
+
+# Munseong: We don't need to address this case, because we only use c++ syntax(e.g., static_cast<T>)
+# SpaceAfterCStyleCast: true  # (int) i;
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatementsExceptControlMacros
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpacesBeforeTrailingComments: 2  # }  // namespace blahblah
+SpacesInAngles: Never
+SpacesInContainerLiterals: false
+SpacesInSquareBrackets: false
+SpacesInParensOptions:
+  InConditionalStatements: false
+  InCStyleCasts: false
+  InEmptyParentheses: false
+  Other: false
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#bracewrapping
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+KeepEmptyLinesAtEOF: true
+AllowShortLambdasOnASingleLine: All
+PenaltyBreakScopeResolution: 2000
+PenaltyExcessCharacter: 100
+BinPackArguments: true
+BinPackParameters: true
+AlignAfterOpenBracket: Align
+
+# BreakAfterReturnType: ExceptShortType

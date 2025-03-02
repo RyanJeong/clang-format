@@ -27,9 +27,17 @@ jobs:
           sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-19 100
           sudo update-alternatives --set clang-format /usr/bin/clang-format-19
 
-      - name: Run check_format.sh
+      - name: Run check_format.sh for c codes
         run: |
           chmod +x check_format.sh
+
           cp -rf ref_c test_c
           ./check_format.sh "$(which clang-format)" ".clang-format-knr" ref_c test_c
+
+      - name: Run check_format.sh for cc codes
+        run: |
+          chmod +x check_format.sh
+
+          cp -rf ref_cc test_cc
+          ./check_format.sh "$(which clang-format)" ".clang-format" ref_cc test_cc
 
