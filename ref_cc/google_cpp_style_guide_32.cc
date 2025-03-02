@@ -1,2 +1,2 @@
-auto foo(int x) -&gt; int;
+auto foo(int x) -> int;
 

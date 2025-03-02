@@ -13,9 +13,9 @@ workarounds disguise your true intent.</p>
 <h3 id="Casting">Casting</h3>
 
 <p>Use C++-style casts
-like <code>static_cast&lt;float&gt;(double_value)</code>, or brace
+like <code>static_cast<float>(double_value)</code>, or brace
 initialization for conversion of arithmetic types like
-<code>int64_t y = int64_t{1} &lt;&lt; 42</code>. Do not use
+<code>int64_t y = int64_t{1} << 42</code>. Do not use
 cast formats like <code>(int)x</code> unless the cast is to
 <code>void</code>. You may use cast formats like <code>T(x)</code> only when
 <code>T</code> is a class type.</p>
@@ -90,18 +90,18 @@ RTTI section</a> for guidance on the use of
 <h3 id="Streams">Streams</h3>
 
 <p>Use streams where appropriate, and stick to "simple"
-usages. Overload <code>&lt;&lt;</code> for streaming only for types
+usages. Overload <code><<</code> for streaming only for types
 representing values, and write only the user-visible value, not any
 implementation details.</p>
 
 <p class="definition"></p>
 <p>Streams are the standard I/O abstraction in C++, as
-exemplified by the standard header <code>&lt;iostream&gt;</code>.
+exemplified by the standard header <code><iostream></code>.
 They are widely used in Google code, mostly for debug logging
 and test diagnostics.</p>
 
 <p class="pros"></p>
-<p>The <code>&lt;&lt;</code> and <code>&gt;&gt;</code>
+<p>The <code><<</code> and <code>>></code>
 stream operators provide an API for formatted I/O that
 is easily learned, portable, reusable, and extensible.
 <code>printf</code>, by contrast, doesn't even support
@@ -134,7 +134,7 @@ streaming code, and the use of operator overloading (which
 may select a different overload than you expect).</li>
 
 <li>The practice of building up output through chains
-of <code>&lt;&lt;</code> operators interferes with
+of <code><<</code> operators interferes with
 internationalization, because it bakes word order into the
 code, and streams' support for localization is <a href="http://www.boost.org/doc/libs/1_48_0/libs/locale/doc/html/rationale.html#rationale_why">
 flawed</a>.</li>
@@ -146,7 +146,7 @@ flawed</a>.</li>
 <li>The streams API is subtle and complex, so programmers must
 develop experience with it in order to use it effectively.</li>
 
-<li>Resolving the many overloads of <code>&lt;&lt;</code> is
+<li>Resolving the many overloads of <code><<</code> is
 extremely costly for the compiler. When used pervasively in a
 large code base, it can consume as much as 20% of the parsing
 and semantic analysis time.</li>
@@ -182,11 +182,11 @@ Use explicit formatting functions (such as
 stream manipulators or formatting flags to control formatting
 details such as number base, precision, or padding.</p>
 
-<p>Overload <code>&lt;&lt;</code> as a streaming operator
+<p>Overload <code><<</code> as a streaming operator
 for your type only if your type represents a value, and
-<code>&lt;&lt;</code> writes out a human-readable string
+<code><<</code> writes out a human-readable string
 representation of that value. Avoid exposing implementation
-details in the output of <code>&lt;&lt;</code>; if you need to print
+details in the output of <code><<</code>; if you need to print
 object internals for debugging, use named functions instead
 (a method named <code>DebugString()</code> is the most common
 convention).</p>
@@ -268,7 +268,7 @@ many other contexts as well. In particular:</p>
 <ul>
   <li>If a function guarantees that it will not modify an argument
   passed by reference or by pointer, the corresponding function parameter
-  should be a reference-to-const (<code>const T&amp;</code>) or
+  should be a reference-to-const (<code>const T&</code>) or
   pointer-to-const (<code>const T*</code>), respectively.</li>
 
   <li>For a function parameter passed by value, <code>const</code> has
@@ -361,7 +361,7 @@ enable their use with <code>constexpr</code>. Do not use
  is
 <code>int</code>. If a program needs an integer type of a
 different size, use an exact-width integer type from
-<code>&lt;cstdint&gt;</code>, such as
+<code><cstdint></code>, such as
 <code>int16_t</code>. If you have a
 value that could ever be greater than or equal to 2^31,
 use a 64-bit type such as <code>int64_t</code>.
@@ -388,7 +388,7 @@ compiler and architecture.</p>
 <p class="decision"></p>
 
 <p>
-The standard library header <code>&lt;cstdint&gt;</code> defines types
+The standard library header <code><cstdint></code> defines types
 like <code>int16_t</code>, <code>uint32_t</code>,
 <code>int64_t</code>, etc. You should always use
 those in preference to <code>short</code>, <code>unsigned

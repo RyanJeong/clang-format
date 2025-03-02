@@ -34,7 +34,7 @@ exploration as to the best-practices when writing and using them.</p>
 
 <p>Do not use coroutines (yet).</p>
 
-<p>Do not include the <code>&lt;coroutine&gt;</code> header,
+<p>Do not include the <code><coroutine></code> header,
 or use the <code>co_await</code>, <code>co_yield</code>,
 or <code>co_return</code> keywords.</p>
 
@@ -116,7 +116,7 @@ Currently, the following libraries are permitted:</p>
   Special Functions</a> from <code>boost/math/special_functions</code></li>
 
   <li><a href="https://www.boost.org/libs/math/doc/html/root_finding.html">
-  Root Finding &amp; Minimization Functions</a> from <code>boost/math/tools</code></li>
+  Root Finding & Minimization Functions</a> from <code>boost/math/tools</code></li>
 
   <li><a href="https://www.boost.org/libs/multi_index/">
   Multi-index</a> from <code>boost/multi_index</code></li>
@@ -166,15 +166,15 @@ and conversion costs.</p>
 
 
   <li>Compile-time rational numbers
-  (<code>&lt;ratio&gt;</code>), because of concerns that
+  (<code><ratio></code>), because of concerns that
   it's tied to a more template-heavy interface
   style.</li>
 
-  <li>The <code>&lt;cfenv&gt;</code> and
-  <code>&lt;fenv.h&gt;</code> headers, because many
+  <li>The <code><cfenv></code> and
+  <code><fenv.h></code> headers, because many
   compilers do not support those features reliably.</li>
 
-  <li>The <code>&lt;filesystem&gt;</code> header, which
+  <li>The <code><filesystem></code> header, which
 
   does not have sufficient support for testing, and suffers
   from inherent security vulnerabilities.</li>
@@ -191,7 +191,7 @@ and conversion costs.</p>
   extensions include GCC's <code>__attribute__</code>, intrinsic functions such
   as <code>__builtin_prefetch</code> or SIMD, <code>#pragma</code>, inline
   assembly, <code>__COUNTER__</code>, <code>__PRETTY_FUNCTION__</code>,
-  compound statement expressions (e.g., <code>foo = ({ int x; Bar(&amp;x); x
+  compound statement expressions (e.g., <code>foo = ({ int x; Bar(&x); x
     })</code>, variable-length arrays and <code>alloca()</code>, and the
    "<a href="https://en.wikipedia.org/wiki/Elvis_operator">Elvis
      Operator</a>" <code>a?:b</code>.</p>

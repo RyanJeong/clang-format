@@ -6,5 +6,5 @@
 lists like other comma-separated lists.</p>
 
 <p>For by-reference captures, do not leave a space between the
-ampersand (<code>&amp;</code>) and the variable name.</p>
+ampersand (<code>&</code>) and the variable name.</p>
 

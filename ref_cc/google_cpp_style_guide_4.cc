@@ -1,10 +1,10 @@
 #include "foo/server/fooserver.h"
 
-#include &lt;sys/types.h&gt;
-#include &lt;unistd.h&gt;
+#include <sys/types.h>
+#include <unistd.h>
 
-#include &lt;string&gt;
-#include &lt;vector&gt;
+#include <string>
+#include <vector>
 
 #include "base/basictypes.h"
 #include "foo/server/bar.h"

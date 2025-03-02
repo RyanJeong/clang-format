@@ -1,3 +1,3 @@
 MyStruct data;
-memset(&amp;data, 0, sizeof(data));
+memset(&data, 0, sizeof(data));
 

@@ -8,6 +8,8 @@ BasedOnStyle: Google
 Language: Cpp
 Standard: c++14
 
+# Spaces inside braces for braced-init-list are optional.  If you use them,
+# put them on both sides!
 Cpp11BracedListStyle: true
 DerivePointerAlignment: false
 IndentCaseLabels: true
@@ -17,9 +19,10 @@ AlignConsecutiveAssignments: None
 AlignOperands: DontAlign
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLoopsOnASingleLine: true
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Always
 AllowShortFunctionsOnASingleLine: All
 AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
 BreakBeforeBinaryOperators: None
 # BreakTemplateDeclarations: Yes
 AlwaysBreakTemplateDeclarations: Yes
@@ -38,7 +41,7 @@ IndentPPDirectives: None
 BreakBeforeTernaryOperators: true
 
 # https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/test/gmock-function-mocker_test.cc#L822
-AllowShortLambdasOnASingleLine: Inline
+# AllowShortLambdasOnASingleLine: Inline
 
 # https://google.github.io/styleguide/cppguide.html#Constructor_Initializer_Lists
 PackConstructorInitializers: NextLine
@@ -69,13 +72,13 @@ BreakConstructorInitializers: BeforeColon
 # https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/include/gmock/gmock-nice-strict.h#L171
 # https://github.com/google/googletest/blob/9d43b27f7a873596496a2ea70721b3f9eb82df01/googlemock/test/gmock-more-actions_test.cc#L266
 # https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions
-AlignAfterOpenBracket: Align
-# AlignAfterOpenBracket: DontAlign
+AlignAfterOpenBracket: AlwaysBreak
+BracedInitializerIndentWidth: 2
 
-AllowAllArgumentsOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
-BinPackArguments: false
-BinPackParameters: false
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackArguments: true
+BinPackParameters: true
 
 # Munseong: We don't need to address this case, because we only use c++ syntax(e.g., static_cast<T>)
 # SpaceAfterCStyleCast: true  # (int) i;
@@ -122,3 +125,4 @@ BraceWrapping:
   SplitEmptyNamespace: false
 
 KeepEmptyLinesAtEOF: true
+AllowShortLambdasOnASingleLine: All

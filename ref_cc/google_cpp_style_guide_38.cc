@@ -35,6 +35,6 @@ For example, avoid patterns like:</p>
  public:
   EXPAND_PUBLIC_WOMBAT_API(Foo)
 
-  EXPAND_WOMBAT_COMPARISONS(Foo, ==, &lt;)
+  EXPAND_WOMBAT_COMPARISONS(Foo, ==, <)
 };
 

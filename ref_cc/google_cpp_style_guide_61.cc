@@ -1,8 +1,8 @@
 class MyClass {
  public:
-  int CountFooErrors(const std::vector&lt;Foo&gt;&amp; foos) {
+  int CountFooErrors(const std::vector<Foo>& foos) {
     int n = 0;  // Clear meaning given limited scope and context
-    for (const auto&amp; foo : foos) {
+    for (const auto& foo : foos) {
       ...
       ++n;
     }

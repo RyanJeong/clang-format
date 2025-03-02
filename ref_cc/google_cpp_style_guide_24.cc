@@ -40,7 +40,7 @@
     and a <code>constexpr</code> constructor.</li>
   <li>If all else fails, you can create an object dynamically and never delete
     it by using a function-local static pointer or reference (e.g.,
-    <code>static const auto&amp; impl = *new T(args...);</code>).</li>
+    <code>static const auto& impl = *new T(args...);</code>).</li>
 </ul>
 
 <h3 id="thread_local">thread_local Variables</h3>

@@ -1,7 +1,7 @@
 {
   Foo foo;
   ...
-  executor-&gt;Schedule([&amp;foo] { Frobnicate(foo); })
+  executor->Schedule([&foo] { Frobnicate(foo); })
   ...
 }
 // BETTER - The compile will fail if `Frobnicate` is a member

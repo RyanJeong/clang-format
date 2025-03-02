@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dependencies: curl, gawk
-# sudo apt update && sudo apt install curl gawk
+# sudo apt update && sudo apt install curl gawk xmlstarlet
 
 url="https://google.github.io/styleguide/cppguide.html"
 html_file=$(mktemp /tmp/page.XXXXXX.html)
@@ -22,6 +22,14 @@ awk 'BEGIN { RS="<pre>|</pre>"; count=0 }
          print $0 > filename;
          close(filename);
      }' "${html_file}"
+
+for file in ${output}_*.cc; do
+  if command -v xmlstarlet &> /dev/null; then
+    xmlstarlet unesc < "${file}" > "${file}.tmp" && mv "${file}.tmp" "${file}"
+  else
+    perl -MHTML::Entities -pe 'decode_entities($_);' "${file}" > "${file}.tmp" && mv "${file}.tmp" "${file}"
+  fi
+done
 
 echo "Successfully extracted codes to ${target_dir}."
 

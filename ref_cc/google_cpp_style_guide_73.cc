@@ -1,8 +1,8 @@
 // Iterates over the contents of a GargantuanTable.
 // Example:
-//    std::unique_ptr&lt;GargantuanTableIterator&gt; iter = table-&gt;NewIterator();
-//    for (iter-&gt;Seek("foo"); !iter-&gt;done(); iter-&gt;Next()) {
-//      process(iter-&gt;key(), iter-&gt;value());
+//    std::unique_ptr<GargantuanTableIterator> iter = table->NewIterator();
+//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
+//      process(iter->key(), iter->value());
 //    }
 class GargantuanTableIterator {
   ...

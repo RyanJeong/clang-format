@@ -12,4 +12,4 @@
     template argument deduction</a> (often abbreviated "CTAD") occurs when
   a variable is declared with a type that names a template, and the template
   argument list is not provided (not even empty angle brackets):</p>
-  <pre class="neutralcode">std::array a = {1, 2, 3};  // `a` is a std::array&lt;int, 3&gt;
+  <pre class="neutralcode">std::array a = {1, 2, 3};  // `a` is a std::array<int, 3>

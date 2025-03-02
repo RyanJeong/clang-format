@@ -9,7 +9,7 @@ the code does what it does, or make the code self describing.</p>
 
 Compare this:
 
-<pre class="badcode">// Find the element in the vector.  &lt;-- Bad: obvious!
+<pre class="badcode">// Find the element in the vector.  <-- Bad: obvious!
 if (std::find(v.begin(), v.end(), element) != v.end()) {
   Process(element);
 }

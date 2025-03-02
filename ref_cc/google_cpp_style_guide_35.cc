@@ -1,3 +1,3 @@
-std::unique_ptr&lt;Foo&gt; FooFactory();
-void FooConsumer(std::unique_ptr&lt;Foo&gt; ptr);
+std::unique_ptr<Foo> FooFactory();
+void FooConsumer(std::unique_ptr<Foo> ptr);
 

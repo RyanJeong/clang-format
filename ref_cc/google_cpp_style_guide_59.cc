@@ -8,7 +8,7 @@ switch (var) {
     break;
   }
   default: {
-    LOG(FATAL) &lt;&lt; "Invalid value in switch statement: " &lt;&lt; var;
+    LOG(FATAL) << "Invalid value in switch statement: " << var;
   }
 }
 

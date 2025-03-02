@@ -7,7 +7,7 @@
   accessing a member.</li>
 
    <li>Pointer operators have no space after the
-   <code>*</code> or <code>&amp;</code>.</li>
+   <code>*</code> or <code>&</code>.</li>
 </ul>
 
 <p>When referring to a pointer or reference (variable declarations or definitions, arguments,

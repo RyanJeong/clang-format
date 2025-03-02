@@ -1,7 +1,7 @@
 class Copyable {
  public:
-  Copyable(const Copyable&amp; other) = default;
-  Copyable&amp; operator=(const Copyable&amp; other) = default;
+  Copyable(const Copyable& other) = default;
+  Copyable& operator=(const Copyable& other) = default;
 
   // The implicit move operations are suppressed by the declarations above.
   // You may explicitly declare move operations to support efficient moves.
@@ -9,26 +9,26 @@ class Copyable {
 
 class MoveOnly {
  public:
-  MoveOnly(MoveOnly&amp;&amp; other) = default;
-  MoveOnly&amp; operator=(MoveOnly&amp;&amp; other) = default;
+  MoveOnly(MoveOnly&& other) = default;
+  MoveOnly& operator=(MoveOnly&& other) = default;
 
   // The copy operations are implicitly deleted, but you can
   // spell that out explicitly if you want:
-  MoveOnly(const MoveOnly&amp;) = delete;
-  MoveOnly&amp; operator=(const MoveOnly&amp;) = delete;
+  MoveOnly(const MoveOnly&) = delete;
+  MoveOnly& operator=(const MoveOnly&) = delete;
 };
 
 class NotCopyableOrMovable {
  public:
   // Not copyable or movable
-  NotCopyableOrMovable(const NotCopyableOrMovable&amp;) = delete;
-  NotCopyableOrMovable&amp; operator=(const NotCopyableOrMovable&amp;)
+  NotCopyableOrMovable(const NotCopyableOrMovable&) = delete;
+  NotCopyableOrMovable& operator=(const NotCopyableOrMovable&)
       = delete;
 
   // The move operations are implicitly disabled, but you can
   // spell that out explicitly if you want:
-  NotCopyableOrMovable(NotCopyableOrMovable&amp;&amp;) = delete;
-  NotCopyableOrMovable&amp; operator=(NotCopyableOrMovable&amp;&amp;)
+  NotCopyableOrMovable(NotCopyableOrMovable&&) = delete;
+  NotCopyableOrMovable& operator=(NotCopyableOrMovable&&)
       = delete;
 };
 

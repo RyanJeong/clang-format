@@ -1,6 +1,6 @@
 class Foo {
  public:
-  Foo(const Foo&amp;) = delete;
-  Foo&amp; operator=(const Foo&amp;) = delete;
+  Foo(const Foo&) = delete;
+  Foo& operator=(const Foo&) = delete;
 };
 

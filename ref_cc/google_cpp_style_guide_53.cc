@@ -58,7 +58,7 @@ For example, instead of:
 <pre class="badcode">{
   Foo foo;
   ...
-  executor-&gt;Schedule([&amp;] { Frobnicate(foo); })
+  executor->Schedule([&] { Frobnicate(foo); })
   ...
 }
 // BAD! The fact that the lambda makes use of a reference to `foo` and

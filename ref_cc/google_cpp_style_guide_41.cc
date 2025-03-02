@@ -16,7 +16,7 @@ be deduced by the compiler, rather than spelled out explicitly in the code:</p>
   <dd>A function template can be invoked without explicit template arguments.
     The compiler deduces those arguments from the types of the function
     arguments:
-    <pre class="neutralcode">template &lt;typename T&gt;
+    <pre class="neutralcode">template <typename T>
 void f(T t);
 
-f(0);  // Invokes f&lt;int&gt;(0)
+f(0);  // Invokes f<int>(0)

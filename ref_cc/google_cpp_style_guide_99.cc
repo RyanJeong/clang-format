@@ -20,7 +20,7 @@ if (condition)
   DoSomething();
 
 // Bad - `if` statement too long to omit braces.
-if (condition1 &amp;&amp;
+if (condition1 &&
     condition2)
   DoSomething();
 

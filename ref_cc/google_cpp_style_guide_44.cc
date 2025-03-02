@@ -1,6 +1,6 @@
 
     The <code>auto</code> can also be qualified with <code>const</code>,
-    <code>&amp;</code>, and <code>&amp;&amp;</code>, but note that these qualifiers
+    <code>&</code>, and <code>&&</code>, but note that these qualifiers
     technically apply to the anonymous tuple/struct/array, rather than the
     individual bindings. The rules that determine the types of the bindings
     are quite complex; the results tend to be unsurprising, except that

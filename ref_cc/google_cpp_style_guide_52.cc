@@ -1,4 +1,4 @@
-std::unique_ptr&lt;Foo&gt; foo = ...;
+std::unique_ptr<Foo> foo = ...;
 [foo = std::move(foo)] () {
   ...
 }

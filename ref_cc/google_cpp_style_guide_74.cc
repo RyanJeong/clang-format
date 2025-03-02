@@ -4,8 +4,8 @@
 // iterator after the underlying GargantuanTable has been destroyed.
 //
 // This method is equivalent to:
-//    std::unique_ptr&lt;Iterator&gt; iter = table-&gt;NewIterator();
-//    iter-&gt;Seek(start_word);
+//    std::unique_ptr<Iterator> iter = table->NewIterator();
+//    iter->Seek(start_word);
 //    return iter;
-std::unique_ptr&lt;Iterator&gt; GetIterator(absl::string_view start_word) const;
+std::unique_ptr<Iterator> GetIterator(absl::string_view start_word) const;
 
