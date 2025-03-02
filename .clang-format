@@ -11,6 +11,25 @@ Standard: c++14
 # Add an empty line at the bottom
 KeepEmptyLinesAtEOF: true
 
-# Horizontally aligns arguments after an open bracket
-# AlignAfterOpenBracket: Align
+# Sort each #include block separately (if foo.cc includes foo.hpp on the top block, it can be preserved)
+IncludeBlocks: Preserve
 
+# Always merge short blocks into a single line
+# before:
+#   while (true) {
+#   }
+# after:
+#   while (true) {}
+AllowShortBlocksOnASingleLine: Always
+
+# To format designated initializer(c++20)
+BracedInitializerIndentWidth: 2
+
+BreakBeforeBraces: Custom  # Custom 사용시 'BraceWrapping' 섹션이 우선 적용됨
+BraceWrapping:
+  AfterFunction: false      # 함수 정의(템플릿 함수 포함) 뒤에 붙임 { (같은 줄)
+  AfterClass: false         # 클래스 정의(템플릿 클래스/struct 포함) 뒤에 붙임 {
+  AfterStruct: false        # struct 정의에도 적용
+  AfterEnum: false          # enum class 등에도 적용
+  AfterControlStatement: false  # if/for/while 등에 대해서도
+  AfterNamespace: false     # namespace { ... } 같은 줄
