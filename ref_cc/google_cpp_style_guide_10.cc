@@ -1,3 +1,3 @@
-// Shorten access to some commonly used names in .cc files.
-namespace baz = ::foo::bar::baz;
+// Forbidden -- This pollutes the namespace.
+using namespace foo;
 

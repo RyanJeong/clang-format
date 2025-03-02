@@ -1,3 +1,2 @@
-    template <typename T, typename U>
-    decltype(declval<T&>() + declval<U&>()) add(T t, U u);
-  
+Func({42, 3.14});  // Error
+

@@ -1,3 +1,6 @@
-
-<p>Short lambdas may be written inline as function arguments.</p>
+enum class AlternateUrlTableError {
+  OK = 0,
+  OUT_OF_MEMORY = 1,
+  MALFORMED_INPUT = 2,
+};
 

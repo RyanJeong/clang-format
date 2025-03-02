@@ -1,12 +1,3 @@
-
-
-<p>These aliases don't document intended use, and half of them aren't meant for client use:</p>
-
-<pre class="badcode">namespace mynamespace {
-// Bad: none of these say how they should be used.
-using DataPoint = ::foo::Bar*;
-using ::std::unordered_set;  // Bad: just for local convenience
-using ::std::hash;           // Bad: just for local convenience
-typedef unordered_set<DataPoint, hash<DataPoint>, DataPointComparator> TimeSeries;
-}  // namespace mynamespace
-
+auto widget = std::make_unique<WidgetWithBellsAndWhistles>(arg1, arg2);
+auto it = my_map_.find(key);
+std::array numbers = {4, 8, 15, 16, 23, 42};

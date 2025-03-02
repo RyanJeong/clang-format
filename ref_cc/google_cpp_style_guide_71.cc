@@ -1,7 +1,5 @@
-
-<pre class="badcode">enum class AlternateUrlTableError {
-  OK = 0,
-  OUT_OF_MEMORY = 1,
-  MALFORMED_INPUT = 2,
-};
+using Bar = Foo;
+typedef Foo Bar;  // But prefer `using` in C++ code.
+using ::other_namespace::Foo;
+using enum MyEnumType;  // Creates aliases for all enumerators in MyEnumType.
 

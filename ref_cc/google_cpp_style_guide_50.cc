@@ -1,7 +1,5 @@
-int weight = 3;
-int sum = 0;
-// Captures `weight` by value and `sum` by reference.
-std::for_each(v.begin(), v.end(), [weight, &sum](int x) {
-  sum += weight * x;
-});
+auto a = 42;  // a is an int
+auto& b = a;  // b is an int&
+auto c = b;   // c is an int
+auto d{42};   // d is an int, not a std::initializer_list<int>
 

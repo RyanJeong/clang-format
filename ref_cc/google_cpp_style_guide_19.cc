@@ -1,6 +1,4 @@
-
-
-<p>It may be more efficient to declare such a variable
-used in a loop outside that loop:</p>
-
+std::vector<int> v;
+v.push_back(1);  // Prefer initializing using brace initialization.
+v.push_back(2);
 

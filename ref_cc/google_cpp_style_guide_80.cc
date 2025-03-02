@@ -1,4 +1,2 @@
-if (!IsAlreadyProcessed(element)) {
-  Process(element);
-}
+std::string table_name;  // OK - snake_case.
 

@@ -1,8 +1,3 @@
-ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
-    Type par_name1,  // 4 space indent
-    Type par_name2,
-    Type par_name3) {
-  DoSomething();  // 2 space indent
-  ...
-}
+const int kDaysInAWeek = 7;
+const int kAndroid8_0_0 = 24;  // Android 8.0.0
 

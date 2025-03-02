@@ -1,4 +1,4 @@
-std::sort(v.begin(), v.end(), [](int x, int y) {
-  return Weight(x) < Weight(y);
-});
+template <typename T>
+void f(T t);
 
+f(0);  // Invokes f<int>(0)
