@@ -24,3 +24,6 @@ AllowShortBlocksOnASingleLine: Always
 
 # Don't allow short enums on a single line
 AllowShortEnumsOnASingleLine: false
+
+# Allow c-style casting style
+SpaceAfterCStyleCast: true

@@ -109,15 +109,15 @@ static void ProcessValues() {
 
 static void BigParameterFunction(int a1, int a2, int a3, int a4, int a5, int a6,
                                  int a7, int a8, int a9) {
-  (void)a1;
-  (void)a2;
-  (void)a3;
-  (void)a4;
-  (void)a5;
-  (void)a6;
-  (void)a7;
-  (void)a8;
-  (void)a9;
+  (void) a1;
+  (void) a2;
+  (void) a3;
+  (void) a4;
+  (void) a5;
+  (void) a6;
+  (void) a7;
+  (void) a8;
+  (void) a9;
 }
 
 int main() {
@@ -228,5 +228,5 @@ int AnotherMainLikeFunc() {
 
 static void VeryLongParamNamesFunction(
     int alphaBetaGammaDeltaEpsilonZetaEtaThetaIotaKappa) {
-  (void)alphaBetaGammaDeltaEpsilonZetaEtaThetaIotaKappa;
+  (void) alphaBetaGammaDeltaEpsilonZetaEtaThetaIotaKappa;
 }
