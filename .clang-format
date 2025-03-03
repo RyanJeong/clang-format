@@ -8,9 +8,6 @@ BasedOnStyle: Google
 Language: Cpp
 Standard: c++14
 
-# Add an empty line at the bottom
-KeepEmptyLinesAtEOF: true
-
 # Sort each #include block separately (if foo.cc includes foo.hpp on the top block, it can be preserved)
 IncludeBlocks: Preserve
 
