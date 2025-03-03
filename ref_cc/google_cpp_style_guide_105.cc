@@ -9,4 +9,3 @@ class Circle : public Shape {
 };
 
 void Circle::Rotate(double /*radians*/) {}
-

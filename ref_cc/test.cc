@@ -467,4 +467,3 @@ int main() {
   std::cout << "Google C++ Style Example - End\n";
   return 0;
 }
-

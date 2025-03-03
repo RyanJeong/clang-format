@@ -8,4 +8,3 @@
 //    iter->Seek(start_word);
 //    return iter;
 std::unique_ptr<Iterator> GetIterator(absl::string_view start_word) const;
-

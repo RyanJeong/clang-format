@@ -3,4 +3,3 @@ class Foo {
   Foo(const Foo&) = delete;
   Foo& operator=(const Foo&) = delete;
 };
-

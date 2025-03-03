@@ -5,4 +5,3 @@
 #ifdef LANG_CXX11
 #include <initializer_list>
 #endif  // LANG_CXX11
-

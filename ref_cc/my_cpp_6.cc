@@ -73,4 +73,3 @@ int main() {
   delete int_ptr;
   return 0;
 }
-
