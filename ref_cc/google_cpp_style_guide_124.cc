@@ -3,4 +3,3 @@ while (condition) {
   // Comments are okay, too
 }
 while (condition) continue;  // Good - `continue` indicates no logic.
-

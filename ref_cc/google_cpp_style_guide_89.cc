@@ -3,4 +3,3 @@ enum class AlternateUrlTableError {
   OUT_OF_MEMORY = 1,
   MALFORMED_INPUT = 2,
 };
-

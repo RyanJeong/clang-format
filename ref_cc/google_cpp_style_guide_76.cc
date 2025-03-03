@@ -15,4 +15,3 @@ switch (x) {
     DoSomethingGeneric();
     break;
 }
-

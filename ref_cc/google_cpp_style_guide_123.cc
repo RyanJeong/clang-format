@@ -7,4 +7,3 @@ switch (var) {
     Bar();
   }
 }
-
