@@ -17,6 +17,27 @@ IncludeBlocks: Preserve
 #   }
 # after:
 #   while (true) {}
+#
+# Munseong: this rule allows this case
+# intended:
+# try {
+#   /* ... */
+# } catch {
+#   return nullptr;
+# }
+#
+# after formatting:
+# try {
+#   /* ... */
+# } catch { return nullptr; }
+#
+# to avoid this case; add a comment like this:
+# try {
+#   /* ... */
+# } catch {
+#   // Munseong: this clause is ...
+#   return nullptr;
+# }
 AllowShortBlocksOnASingleLine: Always
 
 # Don't allow short enums on a single line
