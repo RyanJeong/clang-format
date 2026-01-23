@@ -1,0 +1,2 @@
+int Foo(int x);
+

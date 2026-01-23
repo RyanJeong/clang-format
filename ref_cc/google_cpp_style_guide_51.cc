@@ -1,1 +1,4 @@
-auto f() { return 0; }  // The return type of f is int
+template <typename T>
+void f(T t);
+
+f(0);  // Invokes f<int>(0)
