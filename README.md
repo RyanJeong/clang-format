@@ -26,11 +26,14 @@ sudo update-alternatives --set clang-format /usr/bin/clang-format-19
 
 ```shell
 LOG="log.txt"
+
 rm -rf ${LOG}
+rm -rf test_cc
+
 cp -rf ref_cc test_cc
 for file in test_cc/*; do
   echo "$(basename ${file})" >> ${LOG}
   clang-format --style=file:.clang-format -i ${file}
-  diff ${file} ref_cc/$(basename ${file}) >> ${LOG}
+  diff -w -B ${file} ref_cc/$(basename ${file}) >> ${LOG}
 done
 ```
