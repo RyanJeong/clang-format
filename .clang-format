@@ -1,97 +1,43 @@
----
-# Based on Google C++ Style Guide
-# Reference: https://google.github.io/styleguide/cppguide.html
-# ClangFormat Options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-#
+# A .clang-format file to adhere to the Google C++ style guide
+# - Google C++ Style Guide: https://google.github.io/styleguide/cppguide.html
+# - CLANG-FORMAT STYLE OPTIONS: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# 
 # Author: Munseong Jeong <ryan.m.jeong@hotmail.com>
 
 BasedOnStyle: Google
 Language: Cpp
 Standard: c++14
 
-# Namespace indentation - Do NOT indent code within namespaces
-# This follows Google C++ Style Guide strictly
-NamespaceIndentation: None
-IndentWidth: 2
-UseTab: Never
+# --------------------------------------------------------------------------
+# Pointer and Reference Alignment
+# --------------------------------------------------------------------------
+# Munseong: Force pointers (*) and references (&) to bind to the Type.
+# Ex: int* x; (Left) instead of int *x; (Right)
+DerivePointerAlignment: false
+PointerAlignment: Left
 
-# Include block handling - Preserve user-defined grouping
+# --------------------------------------------------------------------------
+# Include Sorting
+# --------------------------------------------------------------------------
+# Sort each #include block separately (if foo.cc includes foo.hpp on the top block, it can be preserved)
 IncludeBlocks: Preserve
 
-# Allow short blocks on a single line (with caution)
+# --------------------------------------------------------------------------
+# Short Blocks and Enums
+# --------------------------------------------------------------------------
+# Always merge short blocks into a single line
 # before:
 #   while (true) {
 #   }
 # after:
 #   while (true) {}
-#
-# Munseong: this rule allows this case
-# intended:
-# try {
-#   /* ... */
-# } catch {
-#   return nullptr;
-# }
-#
-# after formatting:
-# try {
-#   /* ... */
-# } catch { return nullptr; }
-#
-# to avoid this case; add a comment like this:
-# try {
-#   /* ... */
-# } catch {
-#   // Munseong: this clause is ...
-#   return nullptr;
-# }
 AllowShortBlocksOnASingleLine: Always
 
 # Don't allow short enums on a single line
 AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: All
-AllowShortIfStatementsOnASingleLine: Never
-AllowShortLoopsOnASingleLine: false
 
-# C-style casting
+# --------------------------------------------------------------------------
+# Casting
+# --------------------------------------------------------------------------
+# Allow c-style casting style
 SpaceAfterCStyleCast: true
-
-# Pointer and reference alignment
-PointerAlignment: Left
-
-# Column limit for line wrapping
-ColumnLimit: 80
-
-# Bracket alignment
-AlignAfterOpenBracket: Align
-AlignOperands: true
-
-# Constructor initialization list
-ConstructorInitializerIndentWidth: 2
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
-BreakConstructorInitializersBeforeComma: false
-
-# Brace style
-BreakBeforeBraces: Attach
-
-# Space around comments
-SpacesBeforeTrailingComments: 2
-SpaceInEmptyParentheses: false
-SpacesInContainerLiterals: false
-
-# Template settings
-AlwaysBreakTemplateDeclarations: Yes
-IndentCaseLabels: true
-
-# Trailing comma behavior
-InsertTrailingCommas: None
-
-# Penalties for line breaking
-PenaltyBreakAssignment: 2
-PenaltyBreakBeforeFirstCallParameter: 1
-PenaltyBreakComment: 300
-PenaltyBreakFirstLessLess: 120
-PenaltyBreakString: 1000
-PenaltyExcessCharacter: 1000000
-PenaltyReturnTypeOnItsOwnLine: 200
-
