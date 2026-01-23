@@ -3,3 +3,4 @@ struct UrlTableProperties {
   int num_entries;
   static Pool<UrlTableProperties>* pool;
 };
+

@@ -1,2 +1,3 @@
-// We shouldn't use this internal name in non-absl code.
-using ::absl::container_internal::ImplementationDetail;
+// Remove uninteresting parts of some commonly used names in .cc files.
+namespace sidetable = ::pipeline_diagnostics::sidetable;
+

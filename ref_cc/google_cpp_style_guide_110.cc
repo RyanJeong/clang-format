@@ -1,3 +1,3 @@
-float f = 1.f;
-long double ld = -.5L;
-double d = 1248e6;
+int x = 0;
+auto x_plus_n = [&x](int n) -> int { return x + n; }
+

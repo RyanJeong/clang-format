@@ -1,4 +1,3 @@
-if (raw_size < sizeof(int)) {
-  LOG(ERROR) << "compressed record not big enough for count: " << raw_size;
-  return false;
-}
+MyStruct data;
+memset(&data, 0, sizeof(data));
+

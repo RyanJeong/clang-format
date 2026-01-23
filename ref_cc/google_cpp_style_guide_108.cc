@@ -1,2 +1,4 @@
-int x = 0;
-auto x_plus_n = [&x](int n) -> int { return x + n; }
+// Bad - if someone wants to implement later, it's not clear what the
+// variable means.
+void Circle::Rotate(double) {}
+

@@ -1,2 +1,5 @@
-// Fine if helpful for readability.
-int x, y;
+x = *p;
+p = &x;
+x = r.y;
+x = r->y;
+

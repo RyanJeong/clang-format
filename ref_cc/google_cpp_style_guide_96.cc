@@ -1,5 +1,3 @@
-ProductOptions options;
-options.set_precision_decimals(7);
-options.set_use_cache(ProductOptions::kDontUseCache);
-const DecimalNumber product =
-    CalculateProduct(values, options, /*completion_callback=*/nullptr);
+// The total number of test cases that we run through in this regression test.
+const int kNumTestCases = 6;
+

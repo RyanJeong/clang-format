@@ -3,3 +3,4 @@ enum class UrlTableError {
   kOutOfMemory,
   kMalformedInput,
 };
+
