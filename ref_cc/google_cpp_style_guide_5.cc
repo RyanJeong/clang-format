@@ -1,7 +1,12 @@
-#include "foo/public/fooserver.h"
+#include "foo/server/fooserver.h"
 
-#include "base/port.h"  // For LANG_CXX11.
+#include <sys/types.h>
+#include <unistd.h>
 
-#ifdef LANG_CXX11
-#include <initializer_list>
-#endif  // LANG_CXX11
+#include <string>
+#include <vector>
+
+#include "base/basictypes.h"
+#include "foo/server/bar.h"
+#include "third_party/absl/flags/flag.h"
+

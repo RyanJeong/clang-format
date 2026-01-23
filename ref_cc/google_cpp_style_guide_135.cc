@@ -1,2 +1,7 @@
-int pi(3.14);  // OK -- pi == 3.
-int pi{3.14};  // Compile error: narrowing conversion.
+int x = 3;
+int x(3);
+int x{3};
+std::string name = "Some Name";
+std::string name("Some Name");
+std::string name{"Some Name"};
+

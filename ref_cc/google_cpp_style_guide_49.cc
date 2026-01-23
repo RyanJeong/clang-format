@@ -1,4 +1,2 @@
-template <typename T>
-void f(T t);
+memset(&data, 0, sizeof(MyStruct));
 
-f(0);  // Invokes f<int>(0)

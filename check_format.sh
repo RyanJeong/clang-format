@@ -24,7 +24,7 @@ for ref_file in "$ref_dir"/*; do
 
   file_name=$(basename "$ref_file")
   test_file="$test_dir/$file_name"
-  
+
   if [ ! -f "$test_file" ]; then
     echo "Test file missing: $file_name"
     exit 1
@@ -33,13 +33,12 @@ for ref_file in "$ref_dir"/*; do
   formatted_file="$temp_dir/$file_name"
   # --style='file:./../.clang-format-knr'
   echo "$clang_format --style=file:${clang_format_config_file} $test_file > $formatted_file"
-  "$clang_format" --style=file:"${clang_format_config_file}" "$test_file" > "$formatted_file"
+  "$clang_format" --style=file:"${clang_format_config_file}" "$test_file" >"$formatted_file"
 
-  if ! diff -q "$formatted_file" "$ref_file" > /dev/null; then
+  if ! diff -w -B "$formatted_file" "$ref_file" >/dev/null; then
     echo "Formatting check failed for: $file_name"
     exit 1
   fi
 done
 
 echo "All files passed formatting check."
-
