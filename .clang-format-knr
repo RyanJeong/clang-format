@@ -7,25 +7,40 @@ BasedOnStyle: LLVM
 IndentWidth: 4
 UseTab: Never
 
+# === Struct/Union/Class member indentation ===
+# These options control indentation of struct members to ensure consistent
+# 4-space indentation for all struct/union/class members
+IndentAccessModifiers: false
+AccessModifierOffset: 0
+NamespaceIndentation: None
+
 BreakBeforeBraces: Linux
 BraceWrapping:
   AfterControlStatement: false
   AfterFunction: true
   AfterClass: false
   AfterStruct: false
+  # AfterStruct: false keeps struct opening brace on same line (K&R style)
+  # Struct members will still be indented with IndentWidth: 4
   AfterUnion: false
   AfterNamespace: false
   AfterEnum: false
   BeforeCatch: false
   BeforeElse: false
   IndentBraces: false
+  # IndentBraces: false ensures braces themselves are not indented,
+  # but content inside braces respects IndentWidth setting
 
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
 AllowShortBlocksOnASingleLine: Always
+# AllowShortFunctionsOnASingleLine: None enforces function bodies
+# to always be on separate lines, following K&R convention
+AllowShortFunctionsOnASingleLine: None
+
 IndentCaseLabels: false
 SpaceAfterCStyleCast: true
-AllowShortFunctionsOnASingleLine: None
+# ColumnLimit: 80 wraps lines at 80 characters for better readability
 ColumnLimit: 80
 MaxEmptyLinesToKeep: 1
 Cpp11BracedListStyle: false
@@ -37,7 +52,9 @@ IncludeBlocks: Regroup
 IncludeCategories:
   - Regex:           '<[[:alnum:].]+>'
     Priority:        1
+    # System headers (angle brackets) have highest priority
   - Regex:           '.*'
     Priority:        2
+    # Project headers (quotes) have lower priority
 SortIncludes: CaseSensitive
 AlignEscapedNewlines: Left
